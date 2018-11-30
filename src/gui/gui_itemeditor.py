@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 from pgu import gui
-import pygUI as pygUI
+import gui.pygUI as pygUI
 
 from objects import Item
 from resourcemanager import ResourceManager

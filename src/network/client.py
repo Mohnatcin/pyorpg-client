@@ -1,3 +1,4 @@
+
 from twisted.internet.protocol import Protocol, Factory, ClientFactory
 from twisted.protocols.basic import LineReceiver
 from twisted.internet import reactor, error
@@ -5,9 +6,9 @@ from twisted.internet import reactor, error
 import json
 import base64
 
-from database import *
-from packettypes import *
-from datahandler import *
+from network.database import *
+from network.packettypes import *
+from network.datahandler import *
 from utils.utils import *
 from gui.dialogs import alertMessageDialog
 from constants import *
@@ -73,10 +74,10 @@ class gameClientFactory(ClientFactory):
     def clientConnectionFailed(self, connector, reason):
         errorMsg = reason.getErrorMessage().split(':')
         alertMessageDialog('Unable to connect to server: ' + errorMsg[1] + errorMsg[2], 'An error occured')
-        print reason.getErrorMessage()
+        print (reason.getErrorMessage())
 
     def clientConnectionLost(self, connector, reason):
-        print reason.getErrorMessage()
+        print (reason.getErrorMessage())
         try:
             #reactor.stop()
             log("Disconnection from server")

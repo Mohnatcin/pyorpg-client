@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 from pgu import gui
-import pygUI as pygUI
+import gui.pygUI as pygUI
 
 from objects import Item, NPC, Stats
 from resourcemanager import ResourceManager
@@ -450,7 +450,7 @@ class NPCEditorContainer(gui.Container):
         self.npcNum = npcNum
 
     def updateType(self, value):
-        print 'todo'
+        print( 'todo')
 
     def saveNPC(self, value):
          # if it's a new NPC then find a new NPC id to use

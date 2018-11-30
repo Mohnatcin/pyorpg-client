@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 from pgu import gui
 
-import pygUI as pygUI
+import gui.pygUI as pygUI
 from gamelogic import *
 from objects import *
 from constants import *
@@ -471,7 +471,7 @@ class placeItemControl(gui.Table):
 
         if typeValue == ITEM_TYPE_CURRENCY:
             # do stuff
-            print "todo: add value scroller"
+            print("todo: add value scroller")
 
         # update item num
         self.itemNum = itemNum
@@ -920,5 +920,5 @@ class MapEditorGUI():
 
         g.editor = EDITOR_NONE
         loadMap(getPlayerMap(g.myIndex))
-        print "load map?"
+        print("load map?")
         initMapData()
