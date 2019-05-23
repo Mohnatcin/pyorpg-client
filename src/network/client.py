@@ -48,7 +48,7 @@ class gameClientProtocol(LineReceiver):
         global dataHandler
 
         # handle base64 data
-        decodedData = base64.b64decode(data)
+        decodedData = base64.b64decode(data).decode('ascii')
 
         log("Received data from server")
         log(" -> " + decodedData)
@@ -57,7 +57,7 @@ class gameClientProtocol(LineReceiver):
 
     def sendData(self, data):
         # encode data using base64
-        encodedData = base64.b64encode(data)
+        encodedData = base64.b64encode(data.encode())
         self.sendLine(encodedData)
 
 

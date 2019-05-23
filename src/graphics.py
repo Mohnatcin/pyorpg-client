@@ -593,8 +593,8 @@ class GraphicsEngine():
         if not self.isInBounds():
             return
 
-        x = (g.cursorX-16) / PIC_X
-        y = (g.cursorY-16) / PIC_Y
+        x = int((g.cursorX-16) / PIC_X)
+        y = int((g.cursorY-16) / PIC_Y)
 
         if x >= 0 and x < MAX_MAPX:
             if y >= 0 and y < MAX_MAPY:
