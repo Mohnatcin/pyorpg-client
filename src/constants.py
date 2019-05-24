@@ -1,5 +1,5 @@
 # Server information
-GAME_IP = "127.0.0.1"
+GAME_IP = "25.27.161.157"
 
 # Tilesheet width
 # - Number of tiles in width in tileset
