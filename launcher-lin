@@ -1,0 +1,4 @@
+#!/bin/bash
+# Generated launcher script for PyORPG
+cd bin
+./launcher
